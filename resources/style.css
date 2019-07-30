@@ -1,0 +1,690 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+    
+}
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  
+   
+}
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+/* 2. Typography Styles
+======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 15px;
+  transition: font-size 0.25s ease;
+}
+h1 {
+  font-size: calc(100px / 1.5);
+  line-height: 0.85;
+}
+h2 {
+  font-size: calc(65px / 1.5);
+  margin-top: 10px;
+  line-height: 0.85;
+}
+
+@media(min-width: 720px) {
+  h1 {
+    font-size: calc(65px / 1.25);
+  }
+  h2 {
+    font-size: calc(65px / 1.25);
+  }
+}
+@media(min-width: 1024px) {
+  h1 {
+    font-size: 100px;
+  }
+  h2 {
+    font-size: 60px;
+  }
+}
+
+
+p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0 0 15px;
+}
+a {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 16px;
+  color: #141c39;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  list-style: none;
+}
+
+site-header-left
+img {
+  width: 100%;  
+}
+
+/* 3. Structure Styles
+======================================== */
+.container {
+  margin: 0 auto;
+  max-width: 1280px;    
+}
+
+.container:before, .container:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+ 
+.jumbotron {
+  margin-top: 80px;
+  width: 100%;
+  height: 400px;
+  font-family: 'Black Ops One', cursive;
+  background-image: url("../images/LavasDestruction.png");
+  background-size: cover; 
+  text-align: center;
+}
+
+@media (max-width: @screen-sm-min) {
+    .jumbotron {
+        background-size: 100% 50%;
+        }
+}
+    .row {
+        padding: 0px 30px 15px 30px;
+}
+
+.site-navigation {
+  background-color: #00f4bf;   
+  max-width: 1280px;
+  width: auto;  
+}
+
+.site-header-left {
+  display: inline-block;    
+}
+
+.site-header-left li {
+  line-height: 50px;     
+}
+
+.site-header-left li p {
+  margin-left: 70px;
+}
+
+.site-header-right {
+  display: inline-block;
+  float: right;   
+}
+
+.site-header-right img {
+  height: 35px;
+  width: auto;
+  padding-top: 18px;         
+}
+
+.site-header-right li,
+.footer-right li {
+  display: inline-block;  
+}
+
+.footer-pic h1 {
+  font-family: 'Black Ops One', cursive;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-left: 175px;
+  margin-top: -17px;
+}
+
+.site-header-left li,
+.footer-left li {
+  display: inline;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+.header {
+  background-color: #00f4bf;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3; 
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #00f4bf;
+}
+
+.header img {
+  width: auto;
+  height: 25px;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #141c39;
+  text-decoration: none;
+  font-family: 'Black Ops One', cursive ;
+  font-size: 16px;
+  color: #141c39;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 3em;
+  padding: 0px 20px;
+  font-family: 'Black Ops One', cursive;
+  color: #141c39;
+  text-decoration-line: none;
+  margin-top: 15px;
+    }
+
+.header .logo h3 {
+  font-family: 'Black Ops One', cursive;
+  color: #141c39;
+  font-size: 0.4em;
+  margin-top: -10px;
+  margin-left: 0px;
+}
+
+.header .logo h4 {
+  font-family: 'Black Ops One', cursive;
+  color: #141c39;
+  font-size: 0.4em;
+  margin-top: -17px;
+  opacity: 0.35;
+  margin-left: -4px;
+}
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+    
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+    
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+    
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
+.footer {
+    
+  background-color: #141c39;
+  color: #FFFFFF;
+  padding: 25px;
+  text-align: center;
+    
+}
+.footer-navigation {
+  margin: 0 auto;
+  max-width: 1280px;
+  
+}
+.footer li {
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+}
+
+button {
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+.button {
+  display: inline-block;
+  font-family: Amatic SC, cursive ;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: normal;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.5s ease;
+    margin-top: 10px;
+}
+.button:hover {
+  opacity: 0.75;
+}
+.button-primary {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  background-color: transparent;
+  float: left;
+}
+input, textarea {
+  margin-bottom: 15px;
+  padding: 20px;
+  border: none;
+  box-shadow: none;
+  transition: border-color 0.5s ease;
+  background-color: #141c39;
+  color: #FFFFFF;
+  font-size: 16px;
+  
+}
+input {
+  width: 100%;
+  display: block;
+  background-color: #141c39;
+}
+textarea {
+  width: 100%;
+  background-color: #141c39;
+  
+}
+
+
+.photo-hero {
+  background-color: #ffffff;
+  min-height: 600px;
+    
+}
+.photo-hero-text {
+  padding: 0 20px;
+}
+.photo-hero h1 {
+  color: black;
+  margin: 1em 0 40px;
+    
+}
+.photo-hero h1 span {
+  color: #00a6d6;
+}
+.photo-hero p {
+  color: #FFFFFF;
+  font-size: 44px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-family: 'Permanent Marker', cursive;
+}
+.photo-grid {
+  margin: 0 0 10px 0;
+     
+}
+.image-box {
+  /*box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);*/
+  width: calc(100% - 40px);
+  margin: 20px;
+  max-height: 450px;
+  overflow: hidden;
+  float: right;
+  display: inline-block;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+}
+.photo-blockquote {
+  background-color: #00a6d6;
+  margin-top: -80px;
+  padding-bottom: 40px;
+}
+
+blockquote p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+blockquote:before {
+  content: '  ';
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-align: center;
+  font-size: 150px;
+  color: #FFFFFF;
+  line-height: 30px;
+  padding-top: 40px;
+}
+
+blockquote footer {
+  font-family: font-family: 'Playfair Display', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F9F9F9;
+}
+
+.photo-about {
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.photo-contact h1{
+    font-family: 'Black Ops One', cursive;
+    color: #141c39;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.photo-about, .photo-contact {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #00f4bf;
+    
+}
+
+.photo-about h1 {
+    font-family: 'Black Ops One', cursive;
+    color: #141c39;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.photo-about p {
+    color: #141c39;
+    padding: 0 5%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.list ul{
+    background-color: #00f4bf;
+    width: 100%;
+    height: auto;
+    padding: 5px; 
+}
+
+.list li {
+    font-family: Amatic SC, cursive ;
+    color: #141c39;
+    font-size: 44px;
+    padding-top: 20px;  
+}
+
+.list li a thumbnail {
+    font-size: 25px;
+}
+
+.thumbnail:hover { 
+    width:300px;
+    height:auto; 
+}
+
+.photo-contact {
+  background-color: #00f4bf;
+    font-family: Amatic SC, cursive ;
+   font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.photo-contact h2 {
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.photo-contact p {
+  color: #FFFFFF;
+  padding: 0 10%;
+  text-align: left;
+}
+
+.photo-contact img {
+    width: 350px;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.photo-contact-form {
+  padding: 0 10%;
+}
+
+.photo-contact-form input:nth-child(1), .photo-contact-form input:nth-child(3), .photo-contact-form input:nth-child(2), .photo-contact-form input:nth-child(4) {
+  margin: 0 0 20px; 
+}
+
+@media (min-width: 585px) {
+  .photo-hero {
+    min-height: 600px;
+  }
+}
+@media (min-width: 720px) {
+  .photo-hero {
+    min-height: 500px;
+  }
+  .image-box {
+    width: calc(33.3333% - 40px);
+  }
+  .photo-about p, .photo-contact p, .photo-contact-form {
+    padding: 0 20%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-hero {
+    min-height: 700px;
+  }
+  .photo-hero-text {
+    width: 70%;
+    display: block;
+  }
+  .photo-contact-form input {
+    width: 48%;
+    display: inline-block;
+    float: left;
+  }
+  .photo-contact-form input:nth-child(1), .photo-contact-form input:nth-child(3) {
+    margin: 0 2% 20px 0;
+  }
+  .photo-contact-form input:nth-child(2), .photo-contact-form input:nth-child(4) {
+    margin: 0 0 20px 2%;
+  }
+}
+
+.datepick-inline .calendar-links .datepick-next {
+    float: right;
+    text-align: right;
+    width: 49%;
+    padding-right: 1%;
+    z-index: 99;
+    position: relative;
+    line-height: 1.5em;
+    }
+
+
+
+/*
+    .column-left {
+  float: left;
+  width: 60%;
+  padding: 10px;
+}
+    .column-right {
+  float: left;
+  width: 30%;
+  padding-left: 10px;
+      
+}
+*/
+/*Gallery*/
+
+
+#demo {
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+
+.green{
+  background-color:#6fb936;
+}
+        .thumb{
+            margin-bottom: 30px;
+        }
+        
+        .page-top{
+            margin-top: 30px;
+        }
+
+   
+img.zoom {
+    width: 100%;
+    height: 200px;
+    border-radius:1px;
+    object-fit: cover;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+        
+ 
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+    .modal-header {
+   
+     border-bottom: none;
+}
+    .modal-title {
+        color: aliceblue;
+    }
+    .modal-footer{
+      display:none;  
+    }
